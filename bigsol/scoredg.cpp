@@ -72,7 +72,7 @@ ScoreDialog::ScoreDialog(wxWindow* parent, int total[], int ganados[], wxString 
     list->SetColLabelValue(1, _T(" Total"));
     list->SetColLabelValue(2, _T("  Wins"));
     list->SetColLabelValue(3, _T("     %"));
-    list->SetEditable(false);
+    list->EnableEditing(false);
     //list->AutoSizeColumns();
     list->SetColSize(0,170);
     list->SetColSize(1,50);

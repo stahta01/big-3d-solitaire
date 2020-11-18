@@ -53,7 +53,7 @@ BestTimesDialog::BestTimesDialog(wxWindow* parent,wxString *Tiempo[],wxString *J
     list->SetColLabelValue(1, _T("     Player"));
     list->SetColLabelValue(2, _T("       Time"));
     list->SetColLabelValue(3, _T("   Number"));
-    list->SetEditable(false);
+    list->EnableEditing(false);
     //list->AutoSizeColumns();
     list->SetColSize(0,170);
     list->SetColSize(1,100);

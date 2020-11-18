@@ -73,6 +73,7 @@ public:
     bool CreateSoundWin(wxSound& snd) const;
     wxSound*    	sonido_win;
 private:
+    wxGLContext *m_glcontext;
 	wxString	swinFile;
     bool   		m_init;
     GLuint 		m_gllist;

@@ -1120,7 +1120,7 @@ bool OpenGLCanvas::proceso_de_carga(int a, GLint modo) {
 	color_ini[3]= 0.7f;
 	color_fin[3]= 0.7f;
 	color_cas[3]= 0.7f;
-	SetCurrent();
+	SetCurrent(*m_glcontext);
 	zfondo=-42.0f;
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Limpiamos los buffers de pantalla y Depth
 	glMatrixMode (GL_MODELVIEW);
@@ -2158,8 +2158,15 @@ EVT_MOUSEWHEEL(OpenGLCanvas::onMouseWheel)
 END_EVENT_TABLE()
 OpenGLCanvas::OpenGLCanvas(wxWindow *parent, wxWindowID id,
 		const wxPoint& pos, const wxSize& size, long style, const wxString& name)
-: wxGLCanvas(parent, (wxGLCanvas*) NULL, id, pos, size, style|wxFULL_REPAINT_ON_RESIZE , name )
+#if !wxCHECK_VERSION(3, 0, 0)
+: wxGLCanvas(parent, (wxGLCanvas*) NULL, id, pos, size, style|wxFULL_REPAINT_ON_RESIZE , name ), m_glcontext(0)
+#else
+: wxGLCanvas(parent, id, (const int *) NULL, pos, size, style|wxFULL_REPAINT_ON_RESIZE , name ), m_glcontext(0)
+#endif
 {
+#if wxCHECK_VERSION(3, 0, 0)
+    m_glcontext = new wxGLContext(this, NULL);
+#endif
 	m_init = false;
 	m_gllist = 0;
 	m_rleft = WXK_LEFT;
@@ -2204,6 +2211,7 @@ bool OpenGLCanvas::CreateSoundWin(wxSound& snd) const {
 	return snd.Create(swinFile);
 }
 OpenGLCanvas::~OpenGLCanvas() {
+    delete m_glcontext;
 }
 void OpenGLCanvas::onMouseEvent(wxMouseEvent& e) {
 	int cartaID;
@@ -2526,11 +2534,6 @@ void OpenGLCanvas::OnEnterWindow(wxMouseEvent& WXUNUSED(event)) {
 }
 void OpenGLCanvas::OnPaint(wxPaintEvent& WXUNUSED(event)) {
 	wxPaintDC dc(this);
-#ifndef __WXMOTIF__
-	if (!GetContext())
-		return;
-#endif
-	//SetCurrent();
 	// Init OpenGL once, but after SetCurrent
 	if (!m_init) {
 		InitGL();
@@ -2736,16 +2739,15 @@ void OpenGLCanvas::OnSize(wxSizeEvent& event) {
 	 glMatrixMode(GL_MODELVIEW);							// Selecciona la Matriz Modelview
 	 glLoadIdentity();									// Resetea    la Matriz Modelview
 	 */
+#if !wxCHECK_VERSION(3, 0, 0)
 	// this is also necessary to update the context on some platforms
 	wxGLCanvas::OnSize(event);
+#endif // !wxCHECK_VERSION(3, 0, 0)
 	// set GL viewport (not called by wxGLCanvas::OnSize on all platforms...)
 	int w, h;
 	GetClientSize(&w, &h);
-#ifndef __WXMOTIF__
-	if (GetContext())
-#endif
-	{
-		SetCurrent();
+	if (!m_init) {
+		InitGL();
 		glViewport(0, 0, (GLint) w, (GLint) h);
 	}
 }
@@ -2753,7 +2755,12 @@ void OpenGLCanvas::OnEraseBackground(wxEraseEvent& WXUNUSED(event)) {
 	// Do nothing, to avoid flashing.
 }
 void OpenGLCanvas::InitGL() {
-	SetCurrent();
+#if !wxCHECK_VERSION(3, 0, 0)
+    wxGLCanvas::SetCurrent();
+    m_glcontext = wxGLCanvas::GetContext();
+#else
+    SetCurrent(*m_glcontext);
+#endif
 	// We call this right after our OpenGL window is created.
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f); // This Will Clear The Background Color To Black
 	glClearDepth(1.0); // Enables Clearing Of The Depth Buffer

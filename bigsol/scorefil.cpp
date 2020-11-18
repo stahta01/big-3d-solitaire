@@ -238,7 +238,7 @@ void ScoreFile::Lee(const wxString& player){
 
 void ScoreFile::Escribe(const wxString& player,int total[], int ganados[]){
 	int j=0;
-    if (player){
+    if (!player.IsEmpty()){
         m_config->SetPath(_T("/General"));
         m_config->Write(_T("LastPlayer"), wxString(player));
         m_config->SetPath(_T("/Players"));
