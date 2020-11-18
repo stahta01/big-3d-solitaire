@@ -24,7 +24,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 // Carga una imagen sin tener que usar la libreria GLAUX
 // De momento solo bmp de 24 bits
 //**********************************************//
-  int ImageLoad(char *filename, Image *image)
+  int ImageLoad(const char *filename, Image *image)
 //**********************************************//
 {
 FILE *file;
@@ -369,7 +369,7 @@ return textura;					// Return The Status
 }
 
 //******************************************//
-	GLuint* LoadPointerGLTextures(char *Filename)	// Carga el Bitmap y lo convierte en Textura
+	GLuint* LoadPointerGLTextures(const char *Filename)	// Carga el Bitmap y lo convierte en Textura
 //******************************************//
 {
 GLuint *textura;
@@ -379,8 +379,8 @@ Image *image1;
    
 // Allocate space for texture
 image1 = (Image *) malloc(sizeof(Image));
-if (image1 == NULL) return false;
-if (!ImageLoad(Filename, image1)) return false;
+if (image1 == NULL) return 0;
+if (!ImageLoad(Filename, image1)) return 0;
 
 glGenTextures(1, textura);		// Create The Texture
 // Typical Texture Generation Using Data From The Bitmap

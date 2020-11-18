@@ -225,7 +225,7 @@ char *files_texturas2[53]={
 };
 */
 // Texturas nuevas tipo BMP
-char *files_texturas2[53]={
+const char *files_texturas2[53]={
 	"Data/1/nada","Data/1/Club1.bmp","Data/1/Club2.bmp","Data/1/Club3.bmp","Data/1/Club4.bmp",
 	"Data/1/Club5.bmp","Data/1/Club6.bmp","Data/1/Club7.bmp","Data/1/Club8.bmp","Data/1/Club9.bmp",
 	"Data/1/Club10.bmp","Data/1/Club11.bmp","Data/1/Club12.bmp","Data/1/Club13.bmp","Data/1/Diamond1.bmp",
@@ -241,7 +241,7 @@ char *files_texturas2[53]={
 	"Data/1/Spade13.bmp"
 };
 // Texturas viejas
-char *files_texturas1[53]={
+const char *files_texturas1[53]={
 	"Data/2/nada","Data/2/Club1.bmp","Data/2/Club2.bmp","Data/2/Club3.bmp","Data/2/Club4.bmp",
 	"Data/2/Club5.bmp","Data/2/Club6.bmp","Data/2/Club7.bmp","Data/2/Club8.bmp","Data/2/Club9.bmp",
 	"Data/2/Club10.bmp","Data/2/Club11.bmp","Data/2/Club12.bmp","Data/2/Club13.bmp","Data/2/Diamond1.bmp",
@@ -257,7 +257,7 @@ char *files_texturas1[53]={
 	"Data/2/Spade13.bmp"
 };
 // Texturas Fun tipo PNG
-char *files_texturasFun[53]={
+const char *files_texturasFun[53]={
 	"Data/3/0.png","Data/3/Club1.png","Data/3/Club2.png","Data/3/Club3.png","Data/3/Club4.png",
 	"Data/3/Club5.png","Data/3/Club6.png","Data/3/Club7.png","Data/3/Club8.png","Data/3/Club9.png",
 	"Data/3/Club10.png","Data/3/Club11.png","Data/3/Club12.png","Data/3/Club13.png","Data/3/Diamond1.png",
@@ -273,7 +273,7 @@ char *files_texturasFun[53]={
 	"Data/3/Spade13.png"
 };
 // Texturas Retro
-char *files_texturas4[53]={
+const char *files_texturas4[53]={
 	"Data/3/0.tga","Data/4/Club1.tga","Data/4/Club2.tga","Data/4/Club3.tga","Data/4/Club4.tga",
 	"Data/4/Club5.tga","Data/4/Club6.tga","Data/4/Club7.tga","Data/4/Club8.tga","Data/4/Club9.tga",
 	"Data/4/Club10.tga","Data/4/Club11.tga","Data/4/Club12.tga","Data/4/Club13.tga","Data/4/Diamond1.tga",
@@ -3411,7 +3411,7 @@ void MyFrame::OnImageYellow(wxCommandEvent& event){
 }
 void MyFrame::OnNewDeck(wxCommandEvent& event){
 	for(int a=1;a<53;a++){
-		textura[a]='\0';
+//		textura[a]='\0';
 		textura[a]=deckStandard[a];
 		//textura[a]=&(deckStandard[a]->texID);
 	}
@@ -3427,7 +3427,7 @@ void MyFrame::OnNewDeck(wxCommandEvent& event){
 }
 void MyFrame::OnOldDeck(wxCommandEvent& event){
 	for(int a=1;a<53;a++){
-		textura[a]='\0';
+//		textura[a]='\0';
 		textura[a]=deckOld[a];
 	}
 	textura[0]=background;
@@ -3458,7 +3458,7 @@ void MyFrame::OnFunDeck(wxCommandEvent& event){
 }
 void MyFrame::OnRetroDeck(wxCommandEvent& event){
 	for(int a=1;a<53;a++){
-		textura[a]='\0';
+//		textura[a]='\0';
 		textura[a]=&(deckRetro[a]->texID);
 	}
 	textura[0]=&(deckRetro[0]->texID);

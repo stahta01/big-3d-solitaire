@@ -43,7 +43,7 @@ GLvoid glPrintBitmap(GLint, GLint, char *, int, GLuint, GLuint);
 GLvoid KillFont(GLuint);
 GLvoid glPrint(GLuint, const char *,...);
 GLuint LoadGLTextures(char *);
-GLuint* LoadPointerGLTextures(char *);
+GLuint* LoadPointerGLTextures(const char *);
 
 GLuint LoadGLTexturesRC(unsigned int);
 
@@ -59,7 +59,7 @@ struct Image {
     };
 
 typedef struct Image Image;
-int ImageLoad(char *filename, Image *image);
+int ImageLoad(const char *filename, Image *image);
 //AUX_RGBImageRec *LoadBMP(char *);
 
 #endif
