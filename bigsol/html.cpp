@@ -45,7 +45,7 @@ HelpGameHTML::HelpGameHTML( wxWindow *parent, wxWindowID id, const wxString &tit
 bool HelpGameHTML::AddControls(wxWindow* parent){
     wxString htmlText;
    	//sprintf(buffer2,"help/%s",jocs[tipo_juego-7000].ayuda);
-    wxString htmlFile = wxGetCwd() + wxFILE_SEP_PATH + wxT(jocs[tipo_juego-7000].ayuda);
+    wxString htmlFile = wxGetCwd() + wxFILE_SEP_PATH + jocs[tipo_juego-7000].ayuda;
     wxTextFile file(htmlFile);
     if (file.Exists()){
     	file.Open();

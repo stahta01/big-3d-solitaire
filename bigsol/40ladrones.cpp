@@ -1399,7 +1399,7 @@ int OpenGLCanvas::renderiza(GLint modo) {
 			velocidad=((GLuint)(frames/fInterval));
 		frames=0;
 		fTimeOld=fTime;
-		frame->SetStatusText(_T(buffer), 5);
+		frame->SetStatusText(buffer, 5);
 	}
 	/*
 	 if(juego->hemos_acabado){
@@ -1881,16 +1881,16 @@ int OpenGLCanvas::renderiza(GLint modo) {
 		seconds=(actual-(float)(minutes*60000)-(float)(hours*3600000))/1000.;
 	}
 	sprintf(buffer2, "Pile: %d cards", juego->golum[0]->num_cartas);
-	frame->SetStatusText(_T(buffer2), 1);
+	frame->SetStatusText(buffer2, 1);
 	if (juego->num_mov != num_movimientos) {
 		num_movimientos=juego->num_mov;
 		sprintf(buffer2, "Move: %d ", juego->num_mov);
-		frame->SetStatusText(_T(buffer2), 2);
+		frame->SetStatusText(buffer2, 2);
 	}
 	if (juego->cartas_colocadas != num_cartas_colocadas) {
 		num_cartas_colocadas=juego->cartas_colocadas;
 		sprintf(buffer2, "Put: %d cards", juego->cartas_colocadas);
-		frame->SetStatusText(_T(buffer2), 3);
+		frame->SetStatusText(buffer2, 3);
 	}
 	if (segundos_actuales != (int)seconds) {
 		segundos_actuales=(int)seconds;
@@ -1906,7 +1906,7 @@ int OpenGLCanvas::renderiza(GLint modo) {
 				sprintf(bufferTiempo, "0%1d:%2d:%2.f", hours, minutes, seconds);
 		}
 		sprintf(buffer2, "Time: %s", bufferTiempo);
-		frame->SetStatusText(_T(buffer2), 4);
+		frame->SetStatusText(buffer2, 4);
 	}
 	rotraro-=45.0f/velocidad;
 	base_cil+=0.1;
@@ -2492,7 +2492,7 @@ void OpenGLCanvas::idle(wxIdleEvent& e) {
 					*(frame->BestTime [tipo_juego-7000])=bufferTiempo;
 					*(frame->BestNumber [tipo_juego-7000])=recordNuevo;
 					*(frame->BestJugador[tipo_juego-7000])=frame->jugador;
-					wxMessageDialog dialogClick( NULL, _T(frame->jugador + ", you have the new time record in this game!!"),_T("New time record"), wxOK|wxICON_EXCLAMATION);
+					wxMessageDialog dialogClick( NULL, frame->jugador + ", you have the new time record in this game!!",_T("New time record"), wxOK|wxICON_EXCLAMATION);
 					dialogClick.ShowModal();
 				}
 			}
@@ -2525,7 +2525,7 @@ void OpenGLCanvas::idle(wxIdleEvent& e) {
 	//chequea_automaticos();
 	if (juego->numero_juego>0) {
 		sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre, juego->numero_juego);
-		frame->SetStatusText(_T(buffer2));
+		frame->SetStatusText(buffer2);
 	}
 	Refresh(false);
 }
@@ -2802,7 +2802,7 @@ void OpenGLCanvas::InitGL() {
 	
 	//base_textura=BuildFontBitmap(textura[FUENTE]);
 	sprintf(buffer2, "Loading...");
-	frame->SetStatusText(_T(buffer2), 1);
+	frame->SetStatusText(buffer2, 1);
 	// El resto de texturas se cargan en CreaGLVentana
 	ConstruirCaja(2, 0.16f, 0.025f); // Es el cuadradito para el menu
 	ConstruirCaja(0, 0.05f, 0.075f); // Es la carta
@@ -3621,13 +3621,13 @@ void MyFrame::OnAboutHTML(wxCommandEvent& event) {
 }
 void MyFrame::OnHelpGameHTML(wxCommandEvent& event) {
 	sprintf(buffer2, "%s Help", jocs[tipo_juego-7000].nombre);
-	HelpGameHTML dialog(this, wxID_ANY, wxT(buffer2));
+	HelpGameHTML dialog(this, wxID_ANY, buffer2);
 	if (dialog.ShowModal() == wxID_OK) {
 	}
 }
 void MyFrame::AyudaGameHTML() {
 	sprintf(buffer2, "%s Help", jocs[tipo_juego-7000].nombre);
-	HelpGameHTML dialog(this, wxID_ANY, wxT(buffer2));
+	HelpGameHTML dialog(this, wxID_ANY, buffer2);
 	if (dialog.ShowModal() == wxID_OK) {
 	}
 }
@@ -4590,7 +4590,7 @@ void MyFrame::EstableceJuego(bool cam) {
 		chequea_automaticos();
 	}
 	sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre,juego->numero_juego);
-	frame->SetStatusText(_T(buffer2));
+	frame->SetStatusText(buffer2);
 }
 void MyFrame::NumericEntry(wxCommandEvent& WXUNUSED(event)) {
 	/*
@@ -4601,7 +4601,7 @@ void MyFrame::NumericEntry(wxCommandEvent& WXUNUSED(event)) {
 	 */
 	sprintf(buffer2, "%u", juego->numero_juego);
 	wxTextEntryDialog dialog(this, _T("Enter number game [1-1073676289]"),
-			_T("Select number game"), _T(buffer2), wxOK | wxCANCEL);
+			_T("Select number game"), buffer2, wxOK | wxCANCEL);
 
 	if (dialog.ShowModal() == wxID_OK) {
 		wxString svalor=dialog.GetValue();
@@ -4615,7 +4615,7 @@ void MyFrame::NumericEntry(wxCommandEvent& WXUNUSED(event)) {
 			chequea_automaticos();
 			juego->numero_juego=res;
 			sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre,juego->numero_juego);
-			SetStatusText(_T(buffer2));
+			SetStatusText(buffer2);
 		} else {
 			// Mostramos mensaje de error
 			wxMessageBox(_T("Value not valid"), _T(""), wxOK
@@ -4646,7 +4646,7 @@ void MyFrame::OnCanfield(wxCommandEvent& event) {
 	juego->barajar(0);
 	chequea_automaticos();
 	sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre,juego->numero_juego);
-	SetStatusText(_T(buffer2));
+	SetStatusText(buffer2);
 }
 void MyFrame::OnDoubles(wxCommandEvent& event) {
 	computar_estadistica_perdida();
@@ -4671,7 +4671,7 @@ void MyFrame::OnDoubles(wxCommandEvent& event) {
 	juego->barajar(0);
 	chequea_automaticos();
 	sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre,juego->numero_juego);
-	SetStatusText(_T(buffer2));
+	SetStatusText(buffer2);
 }
 void MyFrame::OnFortyThieves(wxCommandEvent& event) {
 	computar_estadistica_perdida();
@@ -4697,7 +4697,7 @@ void MyFrame::OnFortyThieves(wxCommandEvent& event) {
 	juego->barajar(0);
 	chequea_automaticos();
 	sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre,juego->numero_juego);
-	SetStatusText(_T(buffer2));
+	SetStatusText(buffer2);
 }
 void MyFrame::OnFreecell(wxCommandEvent& event) {
 	computar_estadistica_perdida();
@@ -4722,7 +4722,7 @@ void MyFrame::OnFreecell(wxCommandEvent& event) {
 	juego->barajar(0);
 	chequea_automaticos();
 	sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre,juego->numero_juego);
-	SetStatusText(_T(buffer2));
+	SetStatusText(buffer2);
 }
 void MyFrame::OnGolf(wxCommandEvent& event) {
 	computar_estadistica_perdida();
@@ -4747,7 +4747,7 @@ void MyFrame::OnGolf(wxCommandEvent& event) {
 	juego->barajar(0);
 	chequea_automaticos();
 	sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre,juego->numero_juego);
-	SetStatusText(_T(buffer2));
+	SetStatusText(buffer2);
 }
 void MyFrame::OnKlondike(wxCommandEvent& event) {
 	computar_estadistica_perdida();
@@ -4772,7 +4772,7 @@ void MyFrame::OnKlondike(wxCommandEvent& event) {
 	juego->barajar(0);
 	chequea_automaticos();
 	sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre,juego->numero_juego);
-	SetStatusText(_T(buffer2));
+	SetStatusText(buffer2);
 }
 void MyFrame::OnSpider(wxCommandEvent& event) {
 	//m_canvas->recorrido_out();
@@ -4799,7 +4799,7 @@ void MyFrame::OnSpider(wxCommandEvent& event) {
 	juego->barajar(0);
 	chequea_automaticos();
 	sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre,juego->numero_juego);
-	SetStatusText(_T(buffer2));
+	SetStatusText(buffer2);
 }
 void MyFrame::OnRestartGame(wxCommandEvent& event) {
 	//JUEGO REINICIADO
@@ -4814,7 +4814,7 @@ void MyFrame::OnRestartGame(wxCommandEvent& event) {
 	juego->barajar(juego->numero_juego);
 	chequea_automaticos();
 	sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre,juego->numero_juego);
-	SetStatusText(_T(buffer2));
+	SetStatusText(buffer2);
 }
 void MyFrame::OnNewGame(wxCommandEvent& event) {
 	//JUEGO NUEVO
@@ -4832,7 +4832,7 @@ void MyFrame::OnNewGame(wxCommandEvent& event) {
 	chequea_automaticos();
 	sprintf(buffer2, "%s number %u", jocs[tipo_juego-7000].nombre,
 			juego->numero_juego);
-	SetStatusText(_T(buffer2));
+	SetStatusText(buffer2);
 }
 void MyFrame::OnUndo(wxCommandEvent& event) {
 	if (juego->carta_seleccionada==NOCARTA&& !juego->hemos_acabado) {
