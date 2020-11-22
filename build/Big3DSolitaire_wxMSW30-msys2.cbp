@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Big3DSolitaire wxMSW30 msys2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Static">
+				<Option output="bin/$(TARGET_NAME)/big3sol" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bigsol" />
+				<Option object_output="obj/$(TARGET_NAME)/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-O2" />
+					<Add option="-s" />
+					<Add option="-Wl,-allow-multiple-definition" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_gl-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_html-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_base$(WX_SUFFIX)-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwxpng-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libpng.a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libz.a" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="winmm" />
+					<Add library="comctl32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="oleacc" />
+					<Add library="uuid" />
+					<Add library="winspool" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_BUILD" value="unicode-static" />
+					<Variable name="WX_SUFFIX" value="u" />
+				</Environment>
+			</Target>
+			<Target title="Shared">
+				<Option output="bin/$(TARGET_NAME)/big3sol" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bigsol" />
+				<Option object_output="obj/$(TARGET_NAME)/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DWXUSINGDLL" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-O2" />
+					<Add option="-s" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_gl-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_html-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
+					<Add library="png.dll" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_BUILD" value="unicode" />
+					<Variable name="WX_SUFFIX" value="u" />
+				</Environment>
+			</Target>
+			<Target title="DebugStatic">
+				<Option output="bin/$(TARGET_NAME)/big3sol" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bigsol" />
+				<Option object_output="obj/$(TARGET_NAME)/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-Og" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,-allow-multiple-definition" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_gl-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_html-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_base$(WX_SUFFIX)-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwxpng-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libpng.a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libz.a" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="winmm" />
+					<Add library="comctl32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="oleacc" />
+					<Add library="uuid" />
+					<Add library="winspool" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_BUILD" value="unicode-static" />
+					<Variable name="WX_SUFFIX" value="u" />
+				</Environment>
+			</Target>
+			<Target title="DebugShared">
+				<Option output="bin/$(TARGET_NAME)/big3sol" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bigsol" />
+				<Option object_output="obj/$(TARGET_NAME)/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-Og" />
+					<Add option="-g" />
+					<Add option="-DWXUSINGDLL" />
+				</Compiler>
+				<Linker>
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_gl-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_html-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
+					<Add library="png.dll" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_BUILD" value="unicode" />
+					<Variable name="WX_SUFFIX" value="u" />
+				</Environment>
+			</Target>
+			<Target title="StaticANSI">
+				<Option output="bin/$(TARGET_NAME)/big3sol" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bigsol" />
+				<Option object_output="obj/$(TARGET_NAME)/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-O2" />
+					<Add option="-s" />
+					<Add option="-Wl,-allow-multiple-definition" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_gl-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_html-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_base$(WX_SUFFIX)-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwxpng-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libpng.a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libz.a" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="winmm" />
+					<Add library="comctl32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="oleacc" />
+					<Add library="uuid" />
+					<Add library="winspool" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_BUILD" value="ansi-static" />
+				</Environment>
+			</Target>
+			<Target title="SharedANSI">
+				<Option output="bin/$(TARGET_NAME)/big3sol" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bigsol" />
+				<Option object_output="obj/$(TARGET_NAME)/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DWXUSINGDLL" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-O2" />
+					<Add option="-s" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_gl-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_html-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
+					<Add library="png.dll" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_BUILD" value="ansi" />
+				</Environment>
+			</Target>
+			<Target title="DebugStaticANSI">
+				<Option output="bin/$(TARGET_NAME)/big3sol" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bigsol" />
+				<Option object_output="obj/$(TARGET_NAME)/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-Og" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,-allow-multiple-definition" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_gl-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_html-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwx_base$(WX_SUFFIX)-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libwxpng-$(WX_VERSION).a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libpng.a" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libz.a" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="winmm" />
+					<Add library="comctl32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="oleacc" />
+					<Add library="uuid" />
+					<Add library="winspool" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_BUILD" value="ansi-static" />
+				</Environment>
+			</Target>
+			<Target title="DebugSharedANSI">
+				<Option output="bin/$(TARGET_NAME)/big3sol" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../bigsol" />
+				<Option object_output="obj/$(TARGET_NAME)/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-Og" />
+					<Add option="-g" />
+					<Add option="-DWXUSINGDLL" />
+				</Compiler>
+				<Linker>
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_gl-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_html-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_adv-$(WX_VERSION).dll" />
+					<Add library="wx_$(WX_TOOLKIT)$(WX_SUFFIX)_core-$(WX_VERSION).dll" />
+					<Add library="wx_base$(WX_SUFFIX)-$(WX_VERSION).dll" />
+					<Add library="png.dll" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+				</Linker>
+				<Environment>
+					<Variable name="WX_BUILD" value="ansi" />
+				</Environment>
+			</Target>
+			<Environment>
+				<Variable name="WX_SUFFIX" value="" />
+				<Variable name="WX_TOOLKIT" value="msw" />
+				<Variable name="WX_VERSION" value="3.0" />
+			</Environment>
+		</Build>
+		<VirtualTargets>
+			<Add alias="ANSI" targets="StaticANSI;SharedANSI;DebugStaticANSI;DebugSharedANSI;" />
+			<Add alias="Unicode" targets="Static;Shared;DebugStatic;DebugShared;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-Winvalid-pch" />
+			<Add option="-fno-omit-frame-pointer" />
+			<Add option="-D_FILE_OFFSET_BITS=64" />
+			<Add option="-D__WXMSW__" />
+			<Add directory="$(TARGET_COMPILER_DIR)lib/wx/include/$(WX_TOOLKIT)-$(WX_BUILD)-$(WX_VERSION)" />
+			<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(TARGET_COMPILER_DIR)include/wx-$(WX_VERSION)" />
+		</ResourceCompiler>
+		<Linker>
+			<Add library="exchndl" />
+		</Linker>
+		<Unit filename="../bigsol/40.h" />
+		<Unit filename="../bigsol/40ladrones.cpp" />
+		<Unit filename="../bigsol/40ladrones.h" />
+		<Unit filename="../bigsol/Ccolumna.cpp" />
+		<Unit filename="../bigsol/Ccolumna.h" />
+		<Unit filename="../bigsol/Crender.cpp" />
+		<Unit filename="../bigsol/Crender.h" />
+		<Unit filename="../bigsol/Point3D.cpp" />
+		<Unit filename="../bigsol/Point3D.h" />
+		<Unit filename="../bigsol/Texture.h" />
+		<Unit filename="../bigsol/Tga.h" />
+		<Unit filename="../bigsol/bestTimesdg.cpp" />
+		<Unit filename="../bigsol/bestTimesdg.h" />
+		<Unit filename="../bigsol/bigsol.rc">
+			<Option compilerVar="WINDRES" />
+			<Option weight="10" />
+		</Unit>
+		<Unit filename="../bigsol/canfield.cpp" />
+		<Unit filename="../bigsol/canfield.h" />
+		<Unit filename="../bigsol/canfield2.cpp" />
+		<Unit filename="../bigsol/canfield2.h" />
+		<Unit filename="../bigsol/canfield_sup.cpp" />
+		<Unit filename="../bigsol/canfield_sup.h" />
+		<Unit filename="../bigsol/cards.cpp" />
+		<Unit filename="../bigsol/cards.h" />
+		<Unit filename="../bigsol/colores.cpp" />
+		<Unit filename="../bigsol/colores.h" />
+		<Unit filename="../bigsol/corona.cpp" />
+		<Unit filename="../bigsol/corona.h" />
+		<Unit filename="../bigsol/easthaven.cpp" />
+		<Unit filename="../bigsol/easthaven.h" />
+		<Unit filename="../bigsol/emperor.cpp" />
+		<Unit filename="../bigsol/emperor.h" />
+		<Unit filename="../bigsol/freecell.cpp" />
+		<Unit filename="../bigsol/freecell.h" />
+		<Unit filename="../bigsol/freecell2.cpp" />
+		<Unit filename="../bigsol/freecell2.h" />
+		<Unit filename="../bigsol/game.cpp" />
+		<Unit filename="../bigsol/game.h" />
+		<Unit filename="../bigsol/golf.cpp" />
+		<Unit filename="../bigsol/golf.h" />
+		<Unit filename="../bigsol/golf_ak.cpp" />
+		<Unit filename="../bigsol/golf_ak.h" />
+		<Unit filename="../bigsol/golf_ak2.cpp" />
+		<Unit filename="../bigsol/golf_ak2.h" />
+		<Unit filename="../bigsol/html.cpp" />
+		<Unit filename="../bigsol/html.h" />
+		<Unit filename="../bigsol/indian.cpp" />
+		<Unit filename="../bigsol/indian.h" />
+		<Unit filename="../bigsol/klondike.cpp" />
+		<Unit filename="../bigsol/klondike.h" />
+		<Unit filename="../bigsol/klondike2.cpp" />
+		<Unit filename="../bigsol/klondike2.h" />
+		<Unit filename="../bigsol/ladrones40_2.cpp" />
+		<Unit filename="../bigsol/ladrones40_2.h" />
+		<Unit filename="../bigsol/ladrones40_4.cpp" />
+		<Unit filename="../bigsol/ladrones40_4.h" />
+		<Unit filename="../bigsol/ladrones40y8.cpp" />
+		<Unit filename="../bigsol/ladrones40y8.h" />
+		<Unit filename="../bigsol/lista.cpp" />
+		<Unit filename="../bigsol/lista.h" />
+		<Unit filename="../bigsol/lucky.cpp" />
+		<Unit filename="../bigsol/lucky.h" />
+		<Unit filename="../bigsol/montana.cpp" />
+		<Unit filename="../bigsol/montana.h" />
+		<Unit filename="../bigsol/montecarlo.cpp" />
+		<Unit filename="../bigsol/montecarlo.h" />
+		<Unit filename="../bigsol/montecarlo13.cpp" />
+		<Unit filename="../bigsol/montecarlo13.h" />
+		<Unit filename="../bigsol/new_camara.cpp" />
+		<Unit filename="../bigsol/new_camara.h" />
+		<Unit filename="../bigsol/oceans.cpp" />
+		<Unit filename="../bigsol/oceans.h" />
+		<Unit filename="../bigsol/openglcanvas.h" />
+		<Unit filename="../bigsol/playerdg.cpp" />
+		<Unit filename="../bigsol/playerdg.h" />
+		<Unit filename="../bigsol/rail1.cpp" />
+		<Unit filename="../bigsol/rail1.h" />
+		<Unit filename="../bigsol/rail2.cpp" />
+		<Unit filename="../bigsol/rail2.h" />
+		<Unit filename="../bigsol/resource.h" />
+		<Unit filename="../bigsol/russian.cpp" />
+		<Unit filename="../bigsol/russian.h" />
+		<Unit filename="../bigsol/russian_nk.cpp" />
+		<Unit filename="../bigsol/russian_nk.h" />
+		<Unit filename="../bigsol/scarab.cpp" />
+		<Unit filename="../bigsol/scarab.h" />
+		<Unit filename="../bigsol/scoredg.cpp" />
+		<Unit filename="../bigsol/scoredg.h" />
+		<Unit filename="../bigsol/scorefil.cpp" />
+		<Unit filename="../bigsol/scorefil.h" />
+		<Unit filename="../bigsol/scorpion.cpp" />
+		<Unit filename="../bigsol/scorpion.h" />
+		<Unit filename="../bigsol/simplesimon.cpp" />
+		<Unit filename="../bigsol/simplesimon.h" />
+		<Unit filename="../bigsol/spider.cpp" />
+		<Unit filename="../bigsol/spider.h" />
+		<Unit filename="../bigsol/spider1.cpp" />
+		<Unit filename="../bigsol/spider1.h" />
+		<Unit filename="../bigsol/spider2.cpp" />
+		<Unit filename="../bigsol/spider2.h" />
+		<Unit filename="../bigsol/spider3.cpp" />
+		<Unit filename="../bigsol/spider3.h" />
+		<Unit filename="../bigsol/spiderette.cpp" />
+		<Unit filename="../bigsol/spiderette.h" />
+		<Unit filename="../bigsol/spideretter.cpp" />
+		<Unit filename="../bigsol/spideretter.h" />
+		<Unit filename="../bigsol/text_tex.cpp" />
+		<Unit filename="../bigsol/text_tex.h" />
+		<Unit filename="../bigsol/towers.cpp" />
+		<Unit filename="../bigsol/towers.h" />
+		<Unit filename="../bigsol/treeJuegos.cpp" />
+		<Unit filename="../bigsol/treejuegos.h" />
+		<Unit filename="../bigsol/undos.cpp" />
+		<Unit filename="../bigsol/undos.h" />
+		<Unit filename="../bigsol/wx_defines.h" />
+		<Unit filename="../bigsol/yukon.cpp" />
+		<Unit filename="../bigsol/yukon.h" />
+		<Unit filename="../bigsol/yukon_nk.cpp" />
+		<Unit filename="../bigsol/yukon_nk.h" />
+		<Unit filename="../bigsol/z_four.cpp" />
+		<Unit filename="../bigsol/z_four.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
