@@ -1,6 +1,8 @@
 #ifndef _COLORES_H_
 #define _COLORES_H_
 
+#include <wx/dialog.h>
+
 class ColoresDialog : public wxDialog{
 public:
     wxString m_color;

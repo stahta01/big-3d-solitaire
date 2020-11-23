@@ -20,8 +20,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
+#include "wx_defines.h"
+#include <wx/defs.h>
+
 // Sonido
-#include "wx/sound.h"
+#include <wx/sound.h>
 #define WAV_COLOCAR	_T("Data/1/final.wav")
 
 #include "game.h"

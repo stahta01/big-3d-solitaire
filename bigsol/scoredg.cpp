@@ -9,20 +9,17 @@
 // Licence:     wxWindows licence
 /////////////////////////////////////////////////////////////////////////////
 
-// For compilers that support precompilation, includes "wx/wx.h".
-#include "wx/wxprec.h"
+#include "wx_defines.h"
+#include <wx/defs.h>
 
-#ifdef __BORLANDC__
-#pragma hdrstop
-#endif
+#include <wx/button.h>
+#include <wx/sizer.h>
+#include <wx/grid.h>
 
-#ifndef WX_PRECOMP
-#include "wx/wx.h"
-#endif
 #include "resource.h"
 #include "scoredg.h"
 #define USE_GRID_FOR_SCORE     wxUSE_GRID
-#include "wx/grid.h"
+
 
 BEGIN_EVENT_TABLE(ScoreDialog, wxDialog)
     EVT_CLOSE(ScoreDialog::OnCloseWindow)

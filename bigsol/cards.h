@@ -23,8 +23,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #if !defined(_CARDS_H__)
 #define _CARDS_H__
 
-#include "40.h"
-
 class cards  
 {
 public:

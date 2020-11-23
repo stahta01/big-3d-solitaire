@@ -16,47 +16,51 @@
  along with this program; if not, write to the Free Software
  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-// For compilers that support precompilation, includes "wx.h".
-#include "wx/wxprec.h"
-#ifdef __BORLANDC__
-#pragma hdrstop
-#endif
-#ifndef WX_PRECOMP
-#include "wx/wx.h"
-#endif
+
+#include "wx_defines.h"
+#include <wx/defs.h>
+
+#include <GL/glu.h>	// Header File For The GLu32 Library
+#include <wx/sound.h>
+#include <wx/textdlg.h>
+#include <wx/filedlg.h>
+#include <wx/dcclient.h>
+#include <wx/msgdlg.h>
+#include <wx/menu.h>
 #include <wx/timer.h>
-#include "wx/toolbar.h"
-#include "wx/image.h"
-#include "wx/aboutdlg.h"
+#include <wx/toolbar.h>
+#include <wx/image.h>
+#include <wx/aboutdlg.h>
 // these headers are only needed for custom about dialog
-//#include "wx/statline.h"
-//#include "wx/generic/aboutdlgg.h"
-//#include "wx/filedlg.h"
-#include "wx/propdlg.h"
-#include "wx/datetime.h"
-#include "wx/image.h"
-#include "wx/bookctrl.h"
-#include "wx/artprov.h"
-#include "wx/imaglist.h"
-#include "wx/sysopt.h"
-#include "wx/tipdlg.h"
-#include "wx/numdlg.h"
-#include "wx/choicdlg.h"
-#include "wx/dirdlg.h"
+//#include <wx/statline.h>
+//#include <wx/generic/aboutdlgg.h>
+//#include <wx/filedlg.h>
+#include <wx/propdlg.h>
+#include <wx/datetime.h>
+#include <wx/image.h>
+#include <wx/bookctrl.h>
+#include <wx/artprov.h>
+#include <wx/imaglist.h>
+#include <wx/sysopt.h>
+#include <wx/tipdlg.h>
+#include <wx/numdlg.h>
+#include <wx/choicdlg.h>
+#include <wx/dirdlg.h>
+
 // HTML
-#include "wx/textfile.h"
-#include "wx/html/htmlwin.h"
+#include <wx/textfile.h>
+#include <wx/html/htmlwin.h>
 #include "html.h"
 // Estadisticas
 #include "scorefil.h"
 #include "scoredg.h"
 #include "playerdg.h"
 #include "bestTimesdg.h"
-#include "wx/stockitem.h"
+#include <wx/stockitem.h>
 // Tree
 #include "treejuegos.h"
 // HILOS
-#include "wx/thread.h"
+#include <wx/thread.h>
 // Colores
 #include "colores.h"
 // define this to use XPMs everywhere (by default, BMPs are used under Win)
@@ -85,6 +89,8 @@
 #endif
 // INICIO
 #include "40.h"
+#include "resource.h"
+#include "text_tex.h"
 #include "40ladrones.h"
 #include "new_camara.h"
 #include "Crender.h"
@@ -131,7 +137,7 @@
 //#include "textfile.h"
 #include "Tga.h"
 // Sonido
-#include "wx/sound.h"
+// #include <wx/sound.h>
 // MUSICA MIKMOD
 //#include <unistd.h>
 //#include <mikmod.h>

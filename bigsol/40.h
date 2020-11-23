@@ -19,29 +19,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #ifndef _40_H__
 #define _40_H__
 
-//#include <windows.h>		// Archivo de cabecera para Windows
-#include <stdio.h>			// Include para manejar ficheros
-//#include <gl\glew.h>
-//#include <GL/glut.h>    // Header File For The GLUT Library 
-//#include <GL/gl.h>	// Header File For The OpenGL32 Library
-//#include <GL/glu.h>	// Header File For The GLu32 Library
-//#include <gl\gl.h>			// Archivo de cabecera para la libreria OpenGL32
-//#include <gl\glu.h>			// Archivo de cabecera para la libreria GLu32
-//#include <gl\glaux.h>		// Archivo de cabecera para la libreria Glaux
-#include <stdlib.h>
-#include <string.h>
-//#include <conio.h>
-#include <stdarg.h>
-#include <math.h> 
-#include <time.h>
-//#include <new.h>
-//#include <commctrl.h>
-
-
-// Activar esta linea para chequear memory leaks
-// #include "mmgr.h"
-
-#include "text_tex.h"
+//#include <stdio.h>			// Include para manejar ficheros
+//#include <stdlib.h>
+//#include <string.h>
+//#include <stdarg.h>
+//#include <math.h> 
+//#include <time.h>
+//
+//#include "text_tex.h"
 #include "resource.h"
 //#include "camara.h"
 

@@ -20,13 +20,15 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#ifndef WX_PRECOMP
-#include "wx/wx.h"
-#endif
+#include "wx_defines.h"
+#include <wx/defs.h>
+
+#include <wx/button.h>
+#include <wx/sizer.h>
 
 // HTML
-#include "wx/textfile.h"
-#include "wx/html/htmlwin.h"
+#include <wx/textfile.h>
+#include <wx/html/htmlwin.h>
 
 #include "resource.h"
 #include "html.h"

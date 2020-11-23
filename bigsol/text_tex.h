@@ -16,22 +16,12 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
-#ifndef __text_tex_h__
-#ifndef __TEXT_TEX_H__
+#ifndef TEXT_TEX_H_INCLUDED
+#define TEXT_TEX_H_INCLUDED
 
-#define __text_tex_h__
-#define __TEXT_TEX_H__
-
-//#include <windows.h>		
-#include <stdio.h>			
 //#include <GL/glext.h>			
 #include <GL/gl.h>	// Header File For The OpenGL32 Library
-#include <GL/glu.h>	// Header File For The GLu32 Library		
-//#include <gl\glaux.h>		
-#include <stdlib.h>
-#include <string.h>
-//#include <conio.h>
-#include <stdarg.h>
+//#include <GL/glu.h>	// Header File For The GLu32 Library			
 
 // Definición de funciones
 GLuint BuildFontBitmap(GLuint);
@@ -62,5 +52,4 @@ typedef struct Image Image;
 int ImageLoad(const char *filename, Image *image);
 //AUX_RGBImageRec *LoadBMP(char *);
 
-#endif
 #endif

@@ -23,11 +23,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #if !defined(_GAME_H__)
 #define _GAME_H__
 
-#ifndef WX_PRECOMP
-#include "wx/wx.h"
-#endif
-
-#include "wx/sound.h"
+#include "40.h"
 #include "Crender.h"
 #include "Ccolumna.h"
 #include "cards.h"
@@ -44,6 +40,9 @@ extern bool		retroceso;
 extern bool		mov_pendiente;
 extern bool		activar_sonido;
 extern int		cuantas_serp;
+
+class wxSound;
+class wxString;
 
 class game{
 public:

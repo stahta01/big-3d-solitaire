@@ -17,6 +17,9 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
+#ifndef RESOURCE_H_INCLUDED
+#define RESOURCE_H_INCLUDED
+
 typedef struct{
 	char nombre[26];
 	char grado[10];
@@ -242,3 +245,5 @@ const juegos jocs[]=
 #define ID_TOOLBAR                      						4043
 #define ID_STATUS                       						4044
 #define ID_LICENSE                      						4045
+
+#endif

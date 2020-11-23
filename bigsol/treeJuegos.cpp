@@ -9,21 +9,15 @@
 // Licence:     wxWindows license
 /////////////////////////////////////////////////////////////////////////////
 
-// For compilers that support precompilation, includes "wx/wx.h".
-#include "wx/wxprec.h"
+#include "wx_defines.h"
+#include <wx/defs.h>
 
-#ifdef __BORLANDC__
-    #pragma hdrstop
-#endif
-
-#ifndef WX_PRECOMP
-    #include "wx/wx.h"
-#endif
-
-#include "wx/image.h"
-#include "wx/imaglist.h"
-#include "wx/treectrl.h"
-#include "wx/math.h"
+#include <wx/button.h>
+#include <wx/sizer.h>
+#include <wx/image.h>
+#include <wx/imaglist.h>
+#include <wx/treectrl.h>
+#include <wx/math.h>
 
 #define USE_LOG		0
 #include "40.h"

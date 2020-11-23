@@ -25,7 +25,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
     #define USE_WXGTK 0
 #endif
 
-#include "wx/glcanvas.h"
+#include <wx/frame.h>
+//#include <wx/glcanvas.h>
 #include "openglcanvas.h"
 
 enum Posicionestoolbar {

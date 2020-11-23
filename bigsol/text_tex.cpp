@@ -16,6 +16,12 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
+
+#include <stdio.h>
+
+#include <GL/gl.h>	// Header File For The OpenGL32 Library
+#include <GL/glu.h>	// Header File For The GLu32 Library
+
 #include "text_tex.h"
 
 // quick and dirty bitmap loader...for 24 bit bitmaps with 1 plane only.  

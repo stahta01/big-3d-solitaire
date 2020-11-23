@@ -21,6 +21,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #ifndef _BESTTIMESDG_H_
 #define _BESTTIMESDG_H_
 
+#include <wx/dialog.h>
+
 class BestTimesDialog : public wxDialog
 {
 public:

@@ -12,16 +12,15 @@
 #define USE_GENERIC_TREECTRL 0
 
 #if USE_GENERIC_TREECTRL
-#include "wx/generic/treectlg.h"
+#include <wx/generic/treectlg.h>
 #ifndef wxTreeCtrl
 #define wxTreeCtrl wxGenericTreeCtrl
 #define sm_classwxTreeCtrl sm_classwxGenericTreeCtrl
 #endif
 #endif
-#include "wx/image.h"
-#include "wx/imaglist.h"
-#include "wx/treectrl.h"
-#include "wx/math.h"
+
+#include <wx/treectrl.h>
+#include <wx/dialog.h>
 
 class MyTreeItemData : public wxTreeItemData
 {

@@ -16,20 +16,18 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
-// For compilers that support precompilation, includes "wx/wx.h".
-#include "wx/wxprec.h"
 
-#ifdef __BORLANDC__
-#pragma hdrstop
-#endif
+#include "wx_defines.h"
+#include <wx/defs.h>
 
-#ifndef WX_PRECOMP
-#include "wx/wx.h"
-#endif
+#include <wx/button.h>
+#include <wx/sizer.h>
+#include <wx/grid.h>
+
 #include "resource.h"
 #include "bestTimesdg.h"
 #define USE_GRID_FOR_SCORE     wxUSE_GRID
-#include "wx/grid.h"
+
 
 BEGIN_EVENT_TABLE(BestTimesDialog, wxDialog)
     EVT_CLOSE(BestTimesDialog::OnCloseWindow)

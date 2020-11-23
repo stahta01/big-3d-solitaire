@@ -1,10 +1,9 @@
-#include "wx/wxprec.h"
-#ifdef __BORLANDC__
-#pragma hdrstop
-#endif
-#ifndef WX_PRECOMP
-#include "wx/wx.h"
-#endif
+#include "wx_defines.h"
+#include <wx/defs.h>
+
+#include <wx/button.h>
+#include <wx/listbox.h>
+#include <wx/sizer.h>
 
 #include "colores.h"
 

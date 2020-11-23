@@ -13,6 +13,9 @@
 #ifndef _PLAYERDG_H_
 #define _PLAYERDG_H_
 
+class wxListBox;
+class wxTextCtrl;
+
 class PlayerSelectionDialog : public wxDialog
 {
 public:

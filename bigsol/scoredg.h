@@ -13,6 +13,8 @@
 #ifndef _SCOREDG_H_
 #define _SCOREDG_H_
 
+#include <wx/dialog.h>
+
 class ScoreDialog : public wxDialog
 {
 public:

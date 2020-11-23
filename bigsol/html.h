@@ -20,9 +20,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #ifndef HTML_H_
 #define HTML_H_
 
-#ifndef WX_PRECOMP
-#include "wx/wx.h"
-#endif
+#include <wx/dialog.h>
 
 // ****************************** //
 // LA CLASE ABOUT EN FORMATO HTML //

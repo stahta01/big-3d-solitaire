@@ -9,16 +9,15 @@
 // Licence:     wxWindows licence
 /////////////////////////////////////////////////////////////////////////////
 
-// For compilers that support precompilation, includes "wx/wx.h".
-#include "wx/wxprec.h"
+#include "wx_defines.h"
+#include <wx/defs.h>
 
-#ifdef __BORLANDC__
-#pragma hdrstop
-#endif
-
-#ifndef WX_PRECOMP
-#include "wx/wx.h"
-#endif
+#include <wx/button.h>
+#include <wx/listbox.h>
+#include <wx/msgdlg.h> 
+#include <wx/sizer.h>
+#include <wx/stattext.h>
+#include <wx/textctrl.h>
 
 #include "scorefil.h"
 #include "playerdg.h"

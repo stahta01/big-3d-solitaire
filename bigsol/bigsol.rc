@@ -1,5 +1,5 @@
 bigsolico ICON "bitmaps/icon1.ico"
-#include "wx/msw/wx.rc"
+#include <wx/msw/wx.rc>
 
 new BITMAP "bitmaps/new.bmp"
 open BITMAP "bitmaps/open.bmp"

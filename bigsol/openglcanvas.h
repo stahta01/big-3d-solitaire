@@ -25,10 +25,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
     #define USE_WXGTK 0
 #endif
 
-#include "wx/glcanvas.h"
-#include "wx/sound.h"
+#include <wx/glcanvas.h>
 
 #if wxUSE_GLCANVAS
+
+class wxSound;
 
 class OpenGLCanvas: public wxGLCanvas {
     friend class MyFrame;
