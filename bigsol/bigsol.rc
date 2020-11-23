@@ -1,0 +1,10 @@
+bigsolico ICON "bitmaps/icon1.ico"
+#include "wx/msw/wx.rc"
+
+new BITMAP "bitmaps/new.bmp"
+open BITMAP "bitmaps/open.bmp"
+copy BITMAP "bitmaps/copy.bmp"
+undo BITMAP "bitmaps/undo.bmp"
+redo BITMAP "bitmaps/redo.bmp"
+tutorial BITMAP "bitmaps/tutorial.bmp"
+quit BITMAP "bitmaps/quit.bmp"

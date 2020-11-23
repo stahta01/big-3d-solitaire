@@ -1,0 +1,5 @@
+You can move the camera with the keys INSERT, DEL, HOME, END, AVPAG, REPAG and arrows
+With the right buttom of mouse, extract one card of pile and, if automatic is on an it is possible, it will go to the column available
+You can put personal background image (only PNG format supported)
+Double click to move card/group to another available column
+Use the wheel of the mouse for undo/redo
