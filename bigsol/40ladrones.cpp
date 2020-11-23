@@ -80,7 +80,6 @@
 #include "bitmaps/quit.xpm"
 #endif // USE_XPM_BITMAPS
 */
-const int ID_TOOLBAR = 500;
 #if !wxUSE_GLCANVAS
 #error "OpenGL required: set wxUSE_GLCANVAS to 1 and rebuild the library"
 #endif
