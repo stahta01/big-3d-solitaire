@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_TOWERS_H__)
-#define _TOWERS_H__
+#ifndef TOWERS_H_INCLUDED
+#define TOWERS_H_INCLUDED
 
 #include "klondike.h"
 

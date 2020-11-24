@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_SPIDERETTER_H__)
-#define _SPIDERETTER_H__
+#ifndef SPIDERETTER_H_INCLUDED
+#define SPIDERETTER_H_INCLUDED
 
 #include "spiderette.h"
 

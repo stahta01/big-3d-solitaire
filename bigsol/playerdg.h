@@ -10,8 +10,8 @@
 //---------------------------------------------------------------------------
 // Last modified: 22nd July 1998 - ported to wxWidgets 2.0
 /////////////////////////////////////////////////////////////////////////////
-#ifndef _PLAYERDG_H_
-#define _PLAYERDG_H_
+#ifndef PLAYERDG_H_INCLUDED
+#define PLAYERDG_H_INCLUDED
 
 class wxListBox;
 class wxTextCtrl;

@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_GOLF_H__)
-#define _GOLF_H__
+#ifndef GOLF_H_INCLUDED
+#define GOLF_H_INCLUDED
 
 #include "game.h"
 

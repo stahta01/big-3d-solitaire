@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_MONTECARLO_H__)
-#define _MONTECARLO_H__
+#ifndef MONTECARLO_H_INCLUDED
+#define MONTECARLO_H_INCLUDED
 
 #include "game.h"
 

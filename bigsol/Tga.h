@@ -3,8 +3,8 @@
  * with help from the lesson 1 basecode for Linux/GLX by Mihael Vrbanec)
  */
 
-#ifndef __TGA_H__
-#define __TGA_H__
+#ifndef TGA_H_INCLUDED
+#define TGA_H_INCLUDED
 
 #include "Texture.h"
 //#include <GL/glx.h>

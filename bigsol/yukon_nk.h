@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_YUKON_NK_H__)
-#define _YUKON_NK_H__
+#ifndef YUKON_NK_H_INCLUDED
+#define YUKON_NK_H_INCLUDED
 
 #include "yukon.h"
 

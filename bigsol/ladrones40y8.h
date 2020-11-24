@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_LADRONES40Y8_H__)
-#define _LADRONES40Y8_H__
+#ifndef LADRONES40Y8_H__
+#define LADRONES40Y8_H__
 
 #include "game.h"
 

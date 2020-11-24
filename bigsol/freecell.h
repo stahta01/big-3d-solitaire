@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_FREECELL_H__)
-#define _FREECELL_H__
+#ifndef FREECELL_H_INCLUDED
+#define FREECELL_H_INCLUDED
 
 #include "klondike.h"
 

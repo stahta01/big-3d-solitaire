@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_INDIAN_H__)
-#define _INDIAN_H__
+#ifndef INDIAN_H_INCLUDED
+#define INDIAN_H_INCLUDED
 
 #include "ladrones40_2.h"
 

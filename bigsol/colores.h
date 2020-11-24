@@ -1,5 +1,5 @@
-#ifndef _COLORES_H_
-#define _COLORES_H_
+#ifndef COLORES_H_INCLUDED
+#define COLORES_H_INCLUDED
 
 #include <wx/dialog.h>
 

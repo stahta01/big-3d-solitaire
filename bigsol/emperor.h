@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_EMPEROR_H__)
-#define _EMPEROR_H__
+#ifndef EMPEROR_H_INCLUDED
+#define EMPEROR_H_INCLUDED
 
 #include "game.h"
 

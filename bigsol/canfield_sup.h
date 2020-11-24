@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_CANFIELD_SUP_H__)
-#define _CANFIELD_SUP_H__
+#ifndef CANFIELD_SUP_H_INCLUDED
+#define CANFIELD_SUP_H_INCLUDED
 
 #include "canfield.h"
 

@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_EASTHAVEN_H__)
-#define _EASTHAVEN_H__
+#ifndef EASTHAVEN_H_INCLUDED
+#define EASTHAVEN_H_INCLUDED
 
 #include "klondike.h"
 

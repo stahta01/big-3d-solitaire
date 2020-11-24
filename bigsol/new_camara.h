@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_NEW_CAMARA_H__)
-#define _NEW_CAMARA_H__
+#ifndef NEW_CAMARA_H_INCLUDED
+#define NEW_CAMARA_H_INCLUDED
 
 #include "Point3D.h"
 

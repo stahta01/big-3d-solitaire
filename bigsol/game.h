@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_GAME_H__)
-#define _GAME_H__
+#ifndef GAME_H_INCLUDED
+#define GAME_H_INCLUDED
 
 #include "40.h"
 #include "Crender.h"

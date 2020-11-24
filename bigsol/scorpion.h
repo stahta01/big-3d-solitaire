@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_SCORPION_H__)
-#define _SCORPION_H__
+#ifndef SCORPION_H_INCLUDED
+#define SCORPION_H_INCLUDED
 
 #include "russian.h"
 

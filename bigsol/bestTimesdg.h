@@ -18,8 +18,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 // Name:        bestTimesdg.h
 
-#ifndef _BESTTIMESDG_H_
-#define _BESTTIMESDG_H_
+#ifndef BESTTIMESDG_H_INCLUDED
+#define BESTTIMESDG_H_INCLUDED
 
 #include <wx/dialog.h>
 

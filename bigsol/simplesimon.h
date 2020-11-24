@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_SIMPLESIMON_H__)
-#define _SIMPLESIMON_H__
+#ifndef SIMPLESIMON_H_INCLUDED
+#define SIMPLESIMON_H_INCLUDED
 
 #include "spider.h"
 

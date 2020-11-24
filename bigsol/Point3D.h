@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_POINT3D_H__)
-#define _POINT3D_H__
+#ifndef POINT3D_H_INCLUDED
+#define POINT3D_H_INCLUDED
 
 #include <math.h>
 

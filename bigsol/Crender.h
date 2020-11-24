@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_CRENDER_H__)
-#define _CRENDER_H__
+#ifndef CRENDER_H_INCLUDED
+#define CRENDER_H_INCLUDED
 
 class Crender  
 {

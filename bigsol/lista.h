@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_LISTA_H__)
-#define _LISTA_H__
+#ifndef LISTA_H_INCLUDED
+#define LISTA_H_INCLUDED
 
 class lista{
 public:

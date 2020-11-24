@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_OCEANS_H__)
-#define _OCEANS_H__
+#ifndef OCEANS_H_INCLUDED
+#define OCEANS_H_INCLUDED
 
 #include "freecell2.h"
 

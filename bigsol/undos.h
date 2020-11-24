@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_UNDOS_H__)
-#define _UNDOS_H__
+#ifndef UNDOS_H_INCLUDED
+#define UNDOS_H_INCLUDED
 
 class undos  
 {

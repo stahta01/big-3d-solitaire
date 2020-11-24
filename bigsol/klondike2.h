@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_KLONDIKE2_H__)
-#define _KLONDIKE2_H__
+#ifndef KLONDIKE2_H_INCLUDED
+#define KLONDIKE2_H_INCLUDED
 
 #include "klondike.h"
 

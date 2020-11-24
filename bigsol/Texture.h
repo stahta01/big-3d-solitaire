@@ -3,8 +3,8 @@
  * with help from the lesson 1 basecode for Linux/GLX by Mihael Vrbanec)
  */
 
-#ifndef __TEXTURE_H__
-#define __TEXTURE_H__
+#ifndef TEXTURE_H_INCLUDED
+#define TEXTURE_H_INCLUDED
 
 //#include <GL/glx.h>
 #include <GL/gl.h>

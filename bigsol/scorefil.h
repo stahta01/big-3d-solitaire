@@ -10,8 +10,8 @@
 //---------------------------------------------------------------------------
 // Last modified: 22nd July 1998 - ported to wxWidgets 2.0
 /////////////////////////////////////////////////////////////////////////////
-#ifndef _SCOREFILE_H_
-#define _SCOREFILE_H_
+#ifndef SCOREFILE_H_INCLUDED
+#define SCOREFILE_H_INCLUDED
 
 #include <wx/config.h>
 

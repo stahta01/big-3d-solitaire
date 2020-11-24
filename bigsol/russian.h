@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_RUSSIAN_H__)
-#define _RUSSIAN_H__
+#ifndef RUSSIAN_H_INCLUDED
+#define RUSSIAN_H_INCLUDED
 
 #include "yukon.h"
 
@@ -33,4 +33,4 @@ public:
 	virtual bool mover(int ini, int fin);
 };
 
-#endif // !defined(_RUSSIAN_H__)
+#endif

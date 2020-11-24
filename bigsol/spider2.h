@@ -20,8 +20,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 //////////////////////////////////////////////////////////////////////
 
-#if !defined(_SPIDER2_H__)
-#define _SPIDER2_H__
+#ifndef SPIDER2_H_INCLUDED
+#define SPIDER2_H_INCLUDED
 
 #include "spider.h"
 
