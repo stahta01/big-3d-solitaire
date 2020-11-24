@@ -40,6 +40,8 @@ enum Posicionestoolbar {
 class BigSol: public wxApp {
 public:
     bool OnInit();
+protected:
+    void InitExceptionHandler();
 };
 
 // Define a new frame type

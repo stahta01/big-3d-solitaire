@@ -47,6 +47,11 @@
 #include <wx/choicdlg.h>
 #include <wx/dirdlg.h>
 
+#ifdef __WXMSW__
+    #include "exchndl.h"         // drmingw crash/exception handler
+    #include <wx/msw/winundef.h> // needed after exchndl.h because it includes windows.h
+#endif
+
 // HTML
 #include <wx/textfile.h>
 #include <wx/html/htmlwin.h>
@@ -5115,5 +5120,13 @@ bool BigSol::OnInit() {
 	// Create the main frame window
 	(void) MyFrame::Create(NULL);
 	SetAppName(_T("Big Solitaires 3D"));
+    InitExceptionHandler();
 	return true;
+}
+
+void BigSol::InitExceptionHandler()
+{
+#ifdef __WXMSW__
+    ExcHndlInit();
+#endif
 }
