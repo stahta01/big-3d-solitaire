@@ -80,7 +80,7 @@ BestTimesDialog::BestTimesDialog(wxWindow* parent,wxString *Tiempo[],wxString *J
     list->SetCellBackgroundColour(40, 3, *wxLIGHT_GREY);
     
     font1=new wxFont();
-    font1 = wxTheFontList->FindOrCreateFont(10, wxBOLD, wxNORMAL, wxNORMAL);
+    font1 = wxTheFontList->FindOrCreateFont(10, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
     list->SetCellFont(40, 1, *font1);
     list->SetCellFont(40, 2, *font1);
     list->SetCellFont(40, 3, *font1);
