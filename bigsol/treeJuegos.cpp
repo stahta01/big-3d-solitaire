@@ -247,9 +247,9 @@ void MyTreeCtrl::AddJuegos() {
     SetItemBold(yukoCtg, true);
     
     wxFont *font1=new wxFont();
-    font1 = wxTheFontList->FindOrCreateFont(8, wxNORMAL, wxNORMAL, wxNORMAL);
+    font1 = wxTheFontList->FindOrCreateFont(8, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
     wxFont *font2=new wxFont();
-    font2 = wxTheFontList->FindOrCreateFont(8, wxBOLD, wxNORMAL, wxBOLD);
+    font2 = wxTheFontList->FindOrCreateFont(8, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
     SetItemFont(candCtg, *font2);
     SetItemFont(doubCtg, *font2);
     SetItemFont(fortCtg, *font2);
