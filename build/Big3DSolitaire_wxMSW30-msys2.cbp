@@ -270,6 +270,7 @@
 		<VirtualTargets>
 			<Add alias="ANSI" targets="StaticANSI;SharedANSI;DebugStaticANSI;DebugSharedANSI;" />
 			<Add alias="Unicode" targets="Static;Shared;DebugStatic;DebugShared;" />
+			<Add alias="UnicodeShared" targets="Shared;DebugShared;" />
 		</VirtualTargets>
 		<Compiler>
 			<Add option="-Winvalid-pch" />
