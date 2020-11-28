@@ -74,20 +74,13 @@ ScoreDialog::ScoreDialog(wxWindow* parent, int total[], int ganados[], wxString 
     list->SetColSize(0,170);
     list->SetColSize(1,50);
     list->SetColSize(2,50);
-    list->SetColSize(3,-1);
+    list->SetColSize(3,10);
 
     list->SetColLabelAlignment(wxALIGN_LEFT,wxALIGN_CENTRE);
+    list->SetDefaultCellAlignment(wxALIGN_CENTRE, wxALIGN_CENTRE);
+    list->SetRowLabelSize(0);
+ //   list->SetRowLabelAlignment(wxALIGN_LEFT, wxALIGN_CENTRE);
 
-    wxGridCellAttr *attr=new(wxGridCellAttr);
-    wxGridCellAttr *attr2=new(wxGridCellAttr);
-    attr->SetAlignment(wxALIGN_LEFT,wxALIGN_CENTRE);
-    attr2->SetAlignment(wxALIGN_CENTRE,wxALIGN_CENTRE);
-    list->SetColAttr(0,attr);
-    list->SetColAttr(1,attr2);
-    list->SetColAttr(2,attr2);
-    list->SetColAttr(3,attr2);
-    
-    //list->SetCellAlignment(1, 1, wxALIGN_RIGHT,wxALIGN_CENTRE);
     list->SetCellTextColour(40, 0, *wxBLACK);
     list->SetCellTextColour(40, 1, *wxBLACK);
     list->SetCellTextColour(40, 2, *wxBLACK);
@@ -106,7 +99,6 @@ ScoreDialog::ScoreDialog(wxWindow* parent, int total[], int ganados[], wxString 
     //list->SetLabelTextColour(*wxWHITE);
     //list->SetLabelBackgroundColour(*wxBLUE);
     list->AutoSizeRows();
-    list->SetRowLabelSize(0);
     list->EnableDragRowSize(false);
     list->EnableDragColSize(false);
     list->EnableDragGridSize(false);
